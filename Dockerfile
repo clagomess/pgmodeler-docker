@@ -12,3 +12,6 @@ RUN apt-get install -y qttools5*
 RUN wget https://github.com/pgmodeler/pgmodeler/archive/v0.9.2.tar.gz
 RUN tar -xvf v0.9.2.tar.gz
 RUN mv pgmodeler-0.9.2 pgmodeler && cd pgmodeler && ./linuxdeploy.sh
+
+## add libs that only on xenial
+RUN cp /lib/x86_64-linux-gnu/libpng12.so.0 /tmp

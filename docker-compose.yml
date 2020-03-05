@@ -4,4 +4,6 @@ services:
     build: .
     volumes:
       - ./dist:/pgmodeler-dist
-    command: "cp -r /pgmodeler/dist/pgmodeler-0.9.2-linux64.tgz /pgmodeler-dist/"
+    command: >
+      bash -c "cp /pgmodeler/dist/pgmodeler-0.9.2-linux64.tgz /pgmodeler-dist/
+      && cp /tmp/libpng12.so.0 /pgmodeler-dist/"
